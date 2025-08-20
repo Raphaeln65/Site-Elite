@@ -10,6 +10,7 @@
   <p>Abra o console ou aguarde os prompts/alerts aparecerem.</p>
 
   <!-- Importa o seu arquivo JS -->
-  <script src="site-elite.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
