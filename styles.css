@@ -298,3 +298,41 @@ footer {
     margin-top: 2rem;
     border-top: 3px solid #f53123;
 }
+/* ===== Correções de responsividade do BANNER ===== */
+.banner h1 {
+    /* tamanho fluido: mínimo 1.4rem, cresce com a tela, máximo 3rem */
+    font-size: clamp(1.4rem, 6.5vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+    max-width: 18ch;            /* limita a largura do título para não “espalhar” */
+    margin-inline: auto;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.banner p {
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+    margin-bottom: 1.5rem;
+    max-width: 38ch;
+    margin-inline: auto;
+}
+
+/* tablets */
+@media (max-width: 900px) {
+    .banner { height: 65vh; }
+}
+
+/* celulares pequenos */
+@media (max-width: 480px) {
+    .banner {
+        /* dá espaço por causa do nav fixo no topo */
+        padding: 80px 16px 0;
+        height: 60vh;
+    }
+
+    .btn-banner {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+}
+
