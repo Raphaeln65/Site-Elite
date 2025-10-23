@@ -9,7 +9,7 @@ function enviarMensagemWhatsApp(event) {
     }
 
     const texto = `Olá, meu nome é ${nome}. ${mensagem}`;
-    const numeroWhatsApp = '5528999455351';
+    const numeroWhatsApp = '5528999200777';
     const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
 
     window.open(urlWhatsApp, '_blank');
