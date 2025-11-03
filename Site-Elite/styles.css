@@ -78,6 +78,7 @@ nav a {
     font-weight: 600;
     padding: 8px 12px;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 nav a:hover {
