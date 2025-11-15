@@ -215,22 +215,65 @@ nav a:hover {
 }
 
 /* Sobre */
+/* Sobre */
 .sobre {
     padding: 3rem 1rem;
     text-align: center;
+    background: #ffffff;
+    border-radius: 20px;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* faixa superior da cor da marca */
+.sobre::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #d62828; /* vermelho da marca */
+    border-radius: 20px 20px 0 0;
 }
 
 .sobre h2 {
     margin-bottom: 1.5rem;
     font-size: 2rem;
+    color: #111;
+    font-weight: 700;
 }
+
+.sobre p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
 
 /* Contato */
 .contato {
     padding: 3rem 1rem;
     text-align: center;
+    background: #ffffff;
+    border-radius: 20px;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
-
+.contato::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #d62828; /* vermelho da marca */
+    border-radius: 20px 20px 0 0;
+}
 .contato form {
     max-width: 500px;
     margin: 2rem auto;
