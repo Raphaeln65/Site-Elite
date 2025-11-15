@@ -291,8 +291,8 @@ nav a:hover {
 
 .whatsapp-link img,
 .whatsapp-link svg {
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 70%;
 }
 
 .btn-instagram {
@@ -331,14 +331,34 @@ nav a:hover {
         height: 45px;
     }
 
+   /* telas menores */
+@media (max-width: 480px) {
+
+    .whatsapp-link {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+    }
+
     .whatsapp-link img,
     .whatsapp-link svg {
-        width: 50%;
-        height: 45%;
+        width: 70%;
+        height: 70%;
+    }
+
+    .btn-instagram {
+        width: 60px;
+        height: 60px;
+        bottom: 100px;
+        right: 20px;
+    }
+
+    .btn-instagram img {
+        width: 70%;
+        height: 70%;
     }
 }
-
-
 
 /* Mapa */
 .mapa-container {
