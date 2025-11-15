@@ -295,6 +295,35 @@ nav a:hover {
     height: 60%;
 }
 
+.btn-instagram {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 999;
+    border-radius: 50%;
+    overflow: hidden; /* corta o fundo branco da imagem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+
+.btn-instagram img {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.btn-instagram:hover img {
+    transform: scale(1.1);
+}
+
+
 /* telas menores */
 @media (max-width: 480px) {
     .whatsapp-link {
