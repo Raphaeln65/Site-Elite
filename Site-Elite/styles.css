@@ -18,7 +18,13 @@ html {
 
 /* Banner */
 .banner {
-    width: 100vw;
+    width: 100%;
+    min-height: 100svh;/*altura real tela celular*/
+    background: linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url(../imagens/bateria4.jpg.png) no-repeat center;
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../imagens/bateria4.jpg.png) no-repeat center center/cover;
     background-size: cover;
