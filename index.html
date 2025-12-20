@@ -41,6 +41,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="https://wa.me/5528999200777?text=Olá!%20Quero%20saber%20mais%20sobre%20Baterias%20Automotivas%20" class="btn-banner">PEÇA AGORA</a>
         </div>
     </header>
+    <!-- FAIXA AMARELA -->
+<section class="benefits">
+  <div class="benefits-track">
+    <div class="benefit">🚚 Entrega Rapída</div>
+    <div class="benefit">💰 Preço Justo</div>
+    <div class="benefit">⚡ Checkup elétrico gratuito</div>
+    <div class="benefit">🛡️ Garantia de confiança</div>
+  </div>
+</section>
 
     <!-- Navegação -->
     <nav>
@@ -255,5 +264,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     <script src="script.js"></script>
+
+
+<script>
+let benefitIndex = 0;
+
+function rotateBenefits() {
+    const track = document.querySelector('.benefits-track');
+    const items = document.querySelectorAll('.benefit');
+
+    if (!track) return;
+
+    // DESKTOP → reseta
+    if (window.innerWidth > 768) {
+        track.style.transform = 'translateX(0)';
+        benefitIndex = 0;
+        return;
+    }
+
+    // MOBILE → carrossel
+    benefitIndex = (benefitIndex + 1) % items.length;
+    track.style.transform = `translateX(-${benefitIndex * 100}%)`;
+}
+
+setInterval(rotateBenefits, 2800);
+
+// garante reset ao redimensionar a tela
+window.addEventListener('resize', () => {
+    const track = document.querySelector('.benefits-track');
+    if (track && window.innerWidth > 768) {
+        track.style.transform = 'translateX(0)';
+        benefitIndex = 0;
+    }
+});
+</script>
+
+
 </body>
 </html>
