@@ -45,7 +45,7 @@ body{
 }
 
 .banner h1 {
-    font-size: 3rem;
+    font-size: 15rem;
     margin-bottom: 0.5rem;
 }
 
@@ -106,7 +106,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 1rem;
+    padding: 1rem 1rem;
 }
 
 .titulo-promocao {
@@ -460,20 +460,22 @@ footer {
 /* ===== Correções de responsividade do BANNER ===== */
 .banner h1 {
     /* tamanho fluido: mínimo 1.4rem, cresce com a tela, máximo 3rem */
-    font-size: clamp(1.4rem, 6.5vw, 3rem);
+    font-size: clamp(3.4rem, 6.5vw, 3rem);
     line-height: 1.15;
     margin-bottom: 0.5rem;
     max-width: 18ch;            /* limita a largura do título para não “espalhar” */
     margin-inline: auto;
     word-wrap: break-word;
     word-break: break-word;
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.65);
 }
 
 .banner p {
-    font-size: clamp(1rem, 3.5vw, 1.3rem);
+    font-size: clamp(1.5rem, 3.5vw, 1.3rem);
     margin-bottom: 1.5rem;
     max-width: 38ch;
     margin-inline: auto;
+    text-shadow: 0 6px 18px rgba(8, 8, 8, 0.65);
 }
 
 /* tablets */
@@ -496,10 +498,17 @@ footer {
 }
 
 /* ===== FAIXA DE BENEFÍCIOS (ABAIXO DO BANNER) ===== */
-.benefits {
+.benefits { 
     width: 100%;
-    background-color: #ff0505;
+   background: linear-gradient(
+        to bottom,
+        #d62828 0%,
+        #f80101 58%,
+        #f30303 85%,
+        #ca0202 100%
+    );
     overflow: hidden;
+    
 }
 
 .benefits-track {
@@ -518,6 +527,7 @@ footer {
     font-size: 1.20rem;
     color: #ffffff;
     white-space: nowrap;
+    text-shadow: 0 6px 18px rgba(8, 8, 8, 0.945);
 }
 
 /* MOBILE – vira carrossel */
