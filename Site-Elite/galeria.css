@@ -155,6 +155,76 @@ nav a:hover {
     margin-left: auto;
     margin-right: auto;
 }
+.galeria {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 1,5rem;
+    margin-bottom: 0.5rem;
+}
+.galeria::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: #d62828; /* vermelho da marca */
+    border-radius: 20px 20px 0 0;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 por linha */
+    gap:15px;
+    padding:40px; /* margem nas bordas */
+}
+
+.item-galeria img,
+.item-galeria video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.item-galeria img:hover,
+.item-galeria video:hover {
+    transform: scale(1.05);
+}
+.insta{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap; /* quebra linha no celular */
+}
+
+.insta{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+/* caixa */
+.insta-box{
+    width:300px;
+    height:420px;
+    overflow:hidden;
+    border-radius:12px;
+    background:black;
+}
+
+/* iframe */
+.insta-box iframe{
+    width:100%;
+    height:650px;
+    border:none;
+}
 
 
 /* Produtos */

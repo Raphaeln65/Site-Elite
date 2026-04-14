@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><link rel="stylesheet" href="Site-Elite/galeria.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria - Elite Baterias</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#111;
+    color:rgb(221, 11, 11);
+}
+
+/* Título */
+h1{
+    text-align:center;
+    padding:40px;
+}
+
+/* GRID */
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr); /* 3 por linha */
+    gap:10px;
+    padding:10px;
+}
+
+/* MINIATURAS */
+.galeria img{
+    width:100%;
+    aspect-ratio: 1 / 1; /* deixa quadrado */
+    object-fit: cover;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+}
+
+/* MODAL (imagem grande) */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.modal img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+}
+
+/* BOTÕES */
+.fechar, .prev, .next{
+    position:absolute;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+    user-select:none;
+}
+
+.fechar{
+    top:20px;
+    right:30px;
+}
+
+.prev{
+    left:50px;
+    top:50%;
+}
+
+.next{
+    right:20px;
+    top:50%;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📸 Galeria Elite Baterias</h1>
+
+<div class="galeria">
+    <img src="imagens/galeria/foto1.jpeg">
+    <img src="imagens/galeria/foto2.jpeg">
+    <img src="imagens/galeria/foto3.jpeg">
+    <img src="imagens/galeria/foto4.jpeg">
+    <img src="imagens/galeria/foto5.jpeg">
+    <img src="imagens/galeria/foto6.jpeg">
+    <img src="imagens/galeria/foto7.jpeg">
+    <img src="imagens/galeria/foto8.jpeg">
+    <img src="imagens/galeria/foto9.jpeg">
+    <img src="imagens/galeria/foto10.jpeg">
+    <img src="imagens/galeria/foto11.jpeg">
+    <img src="imagens/galeria/foto12.jpeg">
+        
+</div>
+<div class="galeria">
+<!-- INSTAGRAM SEPARADO -->
+<h2>Veja mais no Instagram</h2>
+</div>
+
+<div class="insta">
+
+    <div class="insta-box">
+        <iframe src="https://www.instagram.com/reel/DQrecOoES8h/embed"></iframe>
+    </div>
+
+    <div class="insta-box">
+        <iframe src="https://www.instagram.com/reel/DQeJb8ZkY1u/embed"></iframe>
+    </div>
+
+    <div class="insta-box">
+        <iframe src="https://www.instagram.com/reel/DR2cIXFEWUX/embed"></iframe>
+    </div>
+
+    <div class="insta-box">
+        <iframe src="https://www.instagram.com/reel/DRmmF2TERH6/embed"></iframe>
+    </div>
+
+</div>
+
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <span class="fechar" onclick="fechar()">✖</span>
+    <span class="prev" onclick="mudar(-1)">◀</span>
+    <img id="imgGrande">
+    <span class="next" onclick="mudar(1)">▶</span>
+</div>
+
+<script>
+const imagens = document.querySelectorAll(".galeria img");
+const modal = document.getElementById("modal");
+const imgGrande = document.getElementById("imgGrande");
+
+let index = 0;
+
+// abrir
+imagens.forEach((img,i)=>{
+    img.onclick = ()=>{
+        index = i;
+        mostrar();
+    }
+});
+
+function mostrar(){
+    modal.style.display="flex";
+    imgGrande.src = imagens[index].src;
+}
+
+// fechar
+function fechar(){
+    modal.style.display="none";
+}
+
+// próxima / anterior
+function mudar(dir){
+    index += dir;
+
+    if(index < 0) index = imagens.length - 1;
+    if(index >= imagens.length) index = 0;
+
+    mostrar();
+}
+
+// fechar clicando fora
+modal.onclick = (e)=>{
+    if(e.target === modal) fechar();
+};
+</script>
+
+</body>
+</html>

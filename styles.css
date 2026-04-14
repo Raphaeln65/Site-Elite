@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Readex Pro', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #202020;
+    color: #ff0505;
     line-height: 1.6;
 }
 
@@ -68,7 +68,7 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #161616;
     text-decoration: none;
     font-weight: 600;
     padding: 8px 12px;
@@ -98,6 +98,67 @@ nav a:hover {
     gap: 25px;
     justify-items: center;
 }
+.galeria {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.galeria h2 {
+    margin-bottom: 30px;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 por linha */
+    gap:15px;
+    padding:40px; /* margem nas bordas */
+}
+
+.item-galeria img,
+.item-galeria video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.item-galeria img:hover,
+.item-galeria video:hover {
+    transform: scale(1.05);
+}
+.insta{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap; /* quebra linha no celular */
+}
+
+.insta{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+/* caixa */
+.insta-box{
+    width:300px;
+    height:420px;
+    overflow:hidden;
+    border-radius:12px;
+    background:black;
+}
+
+/* iframe */
+.insta-box iframe{
+    width:100%;
+    height:650px;
+    border:none;
+}
+
+
 
 /* Produtos */
 .produtos {
