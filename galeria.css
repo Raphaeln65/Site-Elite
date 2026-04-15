@@ -81,7 +81,7 @@
         text-align: center;
     }
 
-    /* Galeria em 2 colunas */
+    /* Galeria em duas colunas */
     .galeria{
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
