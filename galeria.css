@@ -1,12 +1,90 @@
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#111;
+    color:rgb(221, 11, 11);
+}
+
+/* Título */
+h1{
+    text-align:center;
+    padding:40px;
+}
+
+/* GRID */
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr); /* 3 por linha */
+    gap:10px;
+    padding:10px;
+}
+
+/* MINIATURAS */
+.galeria img{
+    width:100%;
+    aspect-ratio: 1 / 1; /* deixa quadrado */
+    object-fit: cover;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+}
+
+/* MODAL (imagem grande) */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.modal img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+}
+
+/* BOTÕES */
+.fechar, .prev, .next{
+    position:absolute;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+    user-select:none;
+}
+
+.fechar{
+    top:20px;
+    right:30px;
+}
+
+.prev{
+    left:50px;
+    top:50%;
+}
+
+.next{
+    right:20px;
+    top:50%;
+}
+
 .galeria {
-    padding: 40px 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 40px;
     text-align: center;
 }
 
-.galeria h2 {
-    font-size: 1,5rem;
-    margin-bottom: 0.5rem;
-}
+/* faixa vermelha */
 .galeria::before {
     content: "";
     position: absolute;
@@ -14,17 +92,16 @@
     left: 0;
     width: 100%;
     height: 10px;
-    background: #d62828; /* vermelho da marca */
+    background: #d62828;
     border-radius: 20px 20px 0 0;
 }
 
-.galeria{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 por linha */
-    gap:15px;
-    padding:40px; /* margem nas bordas */
+.galeria h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
+/* imagens */
 .item-galeria img,
 .item-galeria video {
     width: 100%;
@@ -39,18 +116,12 @@
 .item-galeria video:hover {
     transform: scale(1.05);
 }
+
 .insta{
     display:flex;
     gap:30px;
     justify-content:center;
     flex-wrap:wrap; /* quebra linha no celular */
-}
-
-.insta{
-    display:flex;
-    gap:20px;
-    justify-content:center;
-    flex-wrap:wrap;
 }
 
 /* caixa */
@@ -81,25 +152,14 @@
         text-align: center;
     }
 
-    /* Galeria em duas colunas */
-    .galeria{
-        grid-template-columns: repeat(2, 1fr);
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         gap: 10px;
-        padding: 0 10px;
+        padding: 10px;
     }
 
     .item-galeria img {
         height: 120px;
     }
-
-    /* Instagram menor */
-    .insta-box {
-        width: 90%;
-        height: 380px;
-    }
-
-    .insta-box iframe {
-        height: 600px;
-    }
-
 }
+
