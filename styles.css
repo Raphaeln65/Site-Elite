@@ -281,7 +281,37 @@ nav a:hover {
     background-color: #eb0c0c;
 }
 
-/* Sobre */
+.avaliacoes {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.avaliacoes h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.avaliacao-link {
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.avaliacao-link img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    display: block;
+}
+
+/* efeito top ao passar o mouse */
+.avaliacao-link:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+}
+
 /* Sobre */
 .sobre {
     padding: 3rem 1rem;
